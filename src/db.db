@@ -1,0 +1,6 @@
+CREATE TABLE tasks(
+    id SERIAL PRIMARY KEY,
+    task VARCHAR(255) NOT NULL,
+    priority VARCHAR(6)
+        CHECK(priority in ('low', 'medium', 'high')) DEFAULT 'low',
+}

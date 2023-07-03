@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Formulário"/>
+    <meta name="author" content="Renan Aranda Campos"/>
+    <link rel="stylesheet"  type="text/css" href="../static/style.css"/>
+    <title>Nova tarefa</title>
+  </head>
+  <body>
+    <h1 id="root">Nova tarefas</h1>
+    <form id="form_add" method="post">
+        <input id="task" name="task" type="text" placeholder="Tarefa" autocomplete="off" pattern="[A-Za-z]{3-50}" >
+        <select id="priority" name="priority">
+            <option value="low" select>Baixa</option>
+            <option value="medium">Média</option>
+            <option value="high">Alta</option>
+        </select>
+        <input id="submit" type="submit">
+    </form>
+    <a id="back" href="/home">
+        <p>VOLTAR</p>
+    </a>
+</html>

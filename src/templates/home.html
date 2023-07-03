@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Lista de afazeres"/>
+    <meta name="author" content="Renan Aranda Campos"/>
+    <link rel="stylesheet"  type="text/css" href="../static/style.css"/>
+    <title>Home</title>
+  </head>
+  <body>
+    <h1 id="root">Tarefas</h1>
+    {% if tasks %}
+        <div id="box-tasks">
+            {% for task in tasks %}
+            <div id={{ task["priority"] }}>
+                <p>{{ task.task }}</p>
+                <a href="del/{{ task['id'] }}">
+                    <img name="id" value={{ task["id"] }} id="trash" src="../static/image/trash.png">
+                </a>
+            </div>
+        {% endfor %}
+        </div>
+    {% else %}
+        <h1>Não há task!</h1>
+    {% endif %}
+    <a id="add" href="/add">
+        <p>+ ADICIONAR TAREFA</p>
+    </a>
+</html>

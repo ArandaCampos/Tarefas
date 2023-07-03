@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+
+:root{
+    --red: #FF5A33;
+    --yellow: #FFC74F;
+    --blue: #348888;
+    --green: #B4CF66;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: black;
+}
+#box-tasks{
+    position: relative;
+    top: 0px;
+    width: 100vw;
+    height: 65vh;
+    overflow:hidden;
+    overflow-y: auto;
+}
+
+#high, #medium, #low{
+    position: relative;
+    top: 20px;
+    left: 3vw;
+    width: 90vw;
+    height: 10vh;
+    border-radius: 30px;
+}
+
+#high{
+    background: var(--red);
+}
+
+#medium{
+    background: var(--yellow);
+}
+
+#low{
+    background: var(--blue);
+}
+
+
+#high > p, #medium > p, #low > p {
+    position: relative;
+    top: calc(5vh - 0.6rem );
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+}
+
+#add, #back{
+    position: fixed;
+    bottom: 20px;
+    left: 10vw;
+    width: 80vw;
+    height: 10vh;
+    background: var(--green);
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+#add > p, #back > p{
+    position: relative;
+    top: 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+}
+
+#back{
+    background: var(--red);
+}
+
+#trash{
+    height: 3vh;
+    width: 3vh;
+    position: relative;
+    top: -3vh;
+    left: calc(93vw - 30px - 3vh);
+}
+
+#form_add{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    gap: 20px;
+}
+
+#form_add > select{
+    width: 80vw;
+    height: 10vh;
+}
+#form_add > #task{
+    width: 72vw;
+    height: 9vh;
+}
+
+#form_add > #task:invalid {
+    border: var(--red) solid 3px;
+}
+
+#form_add > #task, #form_add > select{
+    border: 1px solid var(--blue);
+    padding: 5px 10px 5px 20px;
+    border-radius: 30px;
+    font-family: 'poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#form_add > #submit{
+    width: 80vw;
+    height: 10vh;
+    background: var(--green);
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+}
