@@ -39,7 +39,6 @@ class Database():
                 return False
             return True
 
-
     def select(self, query: str) -> list:
         if self.conn:
             with self.conn.cursor() as cur:
